@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "769290798683",
+    "project_id": "equalify-93156",
+    "storage_bucket": "equalify-93156.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769290798683:android:a2429b926e5bf812b7617e",
+        "android_client_info": {
+          "package_name": "com.equalify1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769290798683-a3dggov7srquset3tvlqkua3qql1itt3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiM0G06azQ7La84NXWW7s8L8t0wD70_CU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769290798683-a3dggov7srquset3tvlqkua3qql1itt3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
