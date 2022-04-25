@@ -54,10 +54,18 @@ const MyMesseges = ({navigation}) => {
               source={{uri: item.image}}
             />
             <View style={{height: '100%', justifyContent: 'center'}}>
-              <Text style={{fontSize: 20, paddingLeft: 15, fontWeight: '700'}}>
+              <Text
+                style={{
+                  fontSize: 20,
+                  paddingLeft: 15,
+                  fontWeight: '700',
+                  color: 'black',
+                }}>
                 {item.name}
               </Text>
-              <Text style={{fontSize: 16, paddingLeft: 15}}>{item.email}</Text>
+              <Text style={{fontSize: 16, paddingLeft: 15, color: 'black'}}>
+                {item.email}
+              </Text>
             </View>
           </View>
         </View>

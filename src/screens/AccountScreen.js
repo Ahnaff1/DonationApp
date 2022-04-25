@@ -35,7 +35,7 @@ const AccountScreen = ({navigation}) => {
       <View
         style={{
           width: '95%',
-          height: 350,
+          height: 250,
           justifyContent: 'space-evenly',
         }}>
         <TouchableOpacity
@@ -54,14 +54,7 @@ const AccountScreen = ({navigation}) => {
             left={props => <List.Icon {...props} icon="message" />}
           />
         </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('MyCart')}
-          style={{elevation: 10, backgroundColor: 'white', borderRadius: 10}}>
-          <List.Item
-            title="My Cart"
-            left={props => <List.Icon {...props} icon="cart" />}
-          />
-        </TouchableOpacity>
+
         <TouchableOpacity
           onPress={() => navigation.navigate('MyOrders')}
           style={{elevation: 10, backgroundColor: 'white', borderRadius: 10}}>

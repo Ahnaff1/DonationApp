@@ -70,7 +70,12 @@ const SignupScreen = () => {
 
   return (
     <View style={styles.container}>
-      <View style={{justifyContent: 'center', alignItems: 'center'}}>
+      <View
+        style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+          color: 'black',
+        }}>
         <Text style={styles.main}>Equalify</Text>
       </View>
 

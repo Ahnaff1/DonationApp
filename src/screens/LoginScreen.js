@@ -35,7 +35,9 @@ const LoginScreen = ({navigation}) => {
   return (
     <View style={{flex: 1}}>
       <View style={{justifyContent: 'center', alignItems: 'center'}}>
-        <Text style={{fontSize: 55, fontWeight: 'bold'}}>Equalify</Text>
+        <Text style={{fontSize: 55, color: 'black', fontWeight: 'bold'}}>
+          Equalify
+        </Text>
       </View>
 
       <View style={{margin: 10, justifyContent: 'space-evenly', height: 300}}>
@@ -58,7 +60,7 @@ const LoginScreen = ({navigation}) => {
           Login
         </Button>
         <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
-          <Text style={{paddingLeft: 5, fontSize: 20}}>
+          <Text style={{paddingLeft: 5, fontSize: 20, color: 'black'}}>
             Don't have account?
           </Text>
         </TouchableOpacity>

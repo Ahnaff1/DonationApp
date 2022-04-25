@@ -1,19 +1,19 @@
 import React from 'react';
 import {View, FlatList, TouchableHighlight, Alert, Text} from 'react-native';
 import {Appbar, Button, Card, Paragraph} from 'react-native-paper';
-import {useSelector, useDispatch} from 'react-redux';
+// import {useSelector, useDispatch} from 'react-redux';
 
 const MyCart = ({navigation}) => {
-  const items = useSelector(state => state.cartReducer.selecteditems.items);
-  console.log(items);
+  // const items = useSelector(state => state.cartReducer.selecteditems.items);
+  // console.log(items);
 
-  const dispatch = useDispatch();
-  const selectitem = item => {
-    dispatch({
-      type: 'REMOVE_FROM_CART',
-      payload: item,
-    });
-  };
+  // const dispatch = useDispatch();
+  // const selectitem = item => {
+  //   dispatch({
+  //     type: 'REMOVE_FROM_CART',
+  //     payload: item,
+  //   });
+  // };
 
   const renderItem = item => {
     return (

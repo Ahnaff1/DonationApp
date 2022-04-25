@@ -9,7 +9,7 @@ function MyOrdersScreen({navigation}) {
         <Appbar.BackAction onPress={navigation.goBack} />
         <Appbar.Content title="My Orders" />
       </Appbar.Header>
-      <Text>MY Orders</Text>
+      <Text style={{color: 'black'}}>Screen not ready yet</Text>
     </View>
   );
 }

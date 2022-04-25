@@ -12,15 +12,15 @@ import {
 import firestore from '@react-native-firebase/firestore';
 import auth from '@react-native-firebase/auth';
 
-import {useDispatch} from 'react-redux';
+// import {useDispatch} from 'react-redux';
 
 const HomeScreen = ({navigation}) => {
-  const dispatch = useDispatch();
-  const selectitem = item =>
-    dispatch({
-      type: 'ADD_TO_CART',
-      payload: item,
-    });
+  // const dispatch = useDispatch();
+  // const selectitem = item =>
+  //   dispatch({
+  //     type: 'ADD_TO_CART',
+  //     payload: item,
+  //   });
   const [items, setitems] = useState('');
   const [filterItems, setFilterItems] = useState('');
   const [loading, setLoading] = useState(false);
@@ -85,7 +85,6 @@ const HomeScreen = ({navigation}) => {
                 }>
                 Contact Doner
               </Button>
-              <Button onPress={() => selectitem(item)}>Add to cart</Button>
             </Card.Actions>
           ) : null}
         </Card>
@@ -95,7 +94,9 @@ const HomeScreen = ({navigation}) => {
 
   return (
     <View style={{alignItems: 'center', flex: 1}}>
-      <Text style={{fontSize: 30, fontWeight: 'bold'}}>Equalify</Text>
+      <Text style={{fontSize: 30, fontWeight: 'bold', color: 'black'}}>
+        Equalify
+      </Text>
       <View style={{width: '95%', borderRadius: 10, elevation: 10}}>
         <Searchbar
           placeholder="Search"

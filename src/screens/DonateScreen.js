@@ -58,7 +58,7 @@ const DonateScreen = () => {
   return (
     <View style={{flex: 1}}>
       <View style={{justifyContent: 'center', alignItems: 'center'}}>
-        <Text style={{fontSize: 30, fontWeight: 'bold'}}>
+        <Text style={{fontSize: 30, fontWeight: 'bold', color: 'black'}}>
           Donate on Equalify
         </Text>
       </View>

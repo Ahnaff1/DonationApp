@@ -14,10 +14,10 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import auth from '@react-native-firebase/auth';
 
-import {Provider} from 'react-redux';
-import configureStore from '../redux/reducers/';
+// import {Provider} from 'react-redux';
+// import configureStore from '../redux/reducers/';
 
-const store = configureStore();
+// const store = configureStore();
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -92,11 +92,7 @@ const Navigation = () => {
 };
 
 const App = () => {
-  return (
-    <Provider store={store}>
-      <Navigation />
-    </Provider>
-  );
+  return <Navigation />;
 };
 
 export default App;
