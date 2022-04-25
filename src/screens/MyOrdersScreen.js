@@ -1,17 +1,17 @@
 import React from 'react';
-import {Text, View} from 'react-native';
-import {Appbar} from 'react-native-paper';
+import {View, Text} from 'react-native';
+import {ActivityIndicator, Colors, Appbar} from 'react-native-paper';
 
-const Myorder = ({navigation}) => {
+function MyOrdersScreen({navigation}) {
   return (
     <View>
       <Appbar.Header>
         <Appbar.BackAction onPress={navigation.goBack} />
         <Appbar.Content title="My Orders" />
       </Appbar.Header>
-      <Text>orders</Text>
+      <Text>MY Orders</Text>
     </View>
   );
-};
+}
 
-export default Myorder;
+export default MyOrdersScreen;

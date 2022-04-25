@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Alert, Text, View} from 'react-native';
-import {TextInput, Button} from 'react-native-paper';
+import {TextInput, Button, ProgressBar, Colors} from 'react-native-paper';
 
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 
@@ -40,6 +40,7 @@ const DonateScreen = () => {
         snapshot => {
           const progress =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+
           if (progress == 100) alert('image uploaded');
         },
         error => {

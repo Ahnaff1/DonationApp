@@ -14,8 +14,14 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import auth from '@react-native-firebase/auth';
 
+import {Provider} from 'react-redux';
+import configureStore from '../redux/reducers/';
+
+const store = configureStore();
+
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
+
 const AuthNavigator = () => {
   return (
     <Stack.Navigator>
@@ -32,7 +38,7 @@ const AuthNavigator = () => {
 const TabNavigator = () => {
   return (
     <Tab.Navigator
-      initialRouteName="Home"
+      initialRouteName="HomeNavigation"
       screenOptions={({route}) => ({
         tabBarIcon: ({color, size}) => {
           let iconName;
@@ -44,7 +50,6 @@ const TabNavigator = () => {
           } else {
             iconName = 'user';
           }
-
           return <Feather name={iconName} size={size} color={color} />;
         },
       })}>
@@ -88,9 +93,9 @@ const Navigation = () => {
 
 const App = () => {
   return (
-    <React.Fragment>
+    <Provider store={store}>
       <Navigation />
-    </React.Fragment>
+    </Provider>
   );
 };
 

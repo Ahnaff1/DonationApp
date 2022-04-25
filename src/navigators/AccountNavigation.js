@@ -5,7 +5,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import AccountScreen from '../screens/AccountScreen';
 import MyDonationScreen from '../screens/MyDonationScreen';
 import MessageNavigation from './MessageNavigation';
-import Myorder from '../screens/Myorder';
+import MyCart from '../screens/MyCart';
+import MyOrdersScreen from '../screens/MyOrdersScreen';
 
 const Stack = createNativeStackNavigator();
 const AccountNavigation = () => {
@@ -27,8 +28,13 @@ const AccountNavigation = () => {
         options={{headerShown: false}}
       />
       <Stack.Screen
+        name="MyCart"
+        component={MyCart}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
         name="MyOrders"
-        component={Myorder}
+        component={MyOrdersScreen}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

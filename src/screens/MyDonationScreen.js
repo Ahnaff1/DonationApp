@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, FlatList, Alert} from 'react-native';
+import {View, FlatList, Alert, Text} from 'react-native';
 import {
   Button,
   Card,
@@ -20,14 +20,16 @@ const MyDonationScreen = ({navigation}) => {
       .collection('items')
       .where('uid', '==', auth().currentUser.uid)
       .get();
-    const result = querySnap.docs.map(docSnap => docSnap.data());
-    console.log(result);
+    const result = querySnap.docs.map(docSnap => ({
+      ...docSnap.data(),
+      id: docSnap.id,
+    }));
     setitems(result);
   };
 
   const deleteitem = async item => {
     try {
-      await firestore().collection('items').doc(item).delete();
+      await firestore().collection('items').doc(item.id).delete();
       Alert.alert('deleted your donation');
     } catch (err) {
       Alert.alert('something went wrong');
@@ -74,20 +76,26 @@ const MyDonationScreen = ({navigation}) => {
         <Appbar.BackAction onPress={navigation.goBack} />
         <Appbar.Content title="My Donation" />
       </Appbar.Header>
-      <View style={{width: '99%', marginBottom: 115}}>
-        <FlatList
-          data={items.reverse()}
-          keyExtractor={item => item.image}
-          renderItem={({item}) => renderItem(item)}
-          showsVerticalScrollIndicator={false}
-          onRefresh={() => {
-            setLoading(true);
-            getitems();
-            setLoading(false);
-          }}
-          refreshing={loading}
-        />
-      </View>
+      {items != 0 ? (
+        <View style={{width: '99%', marginBottom: 115}}>
+          <FlatList
+            data={items}
+            keyExtractor={item => item.image}
+            renderItem={({item}) => renderItem(item)}
+            showsVerticalScrollIndicator={false}
+            onRefresh={() => {
+              setLoading(true);
+              getitems();
+              setLoading(false);
+            }}
+            refreshing={loading}
+          />
+        </View>
+      ) : (
+        <View style={{alignItems: 'center'}}>
+          <Text>You have not donated anything</Text>
+        </View>
+      )}
     </View>
   );
 };
