@@ -11,6 +11,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Test from './screens/Test';
 
 import auth from '@react-native-firebase/auth';
 
@@ -84,15 +85,15 @@ const Navigation = () => {
     });
     return unsubscribe;
   }, []);
-  return (
-    <NavigationContainer>
+  return {
+    /*<NavigationContainer>
       {user ? <TabNavigator /> : <AuthNavigator />}
-    </NavigationContainer>
-  );
+  </NavigationContainer>*/
+  };
 };
 
 const App = () => {
-  return <Navigation />;
+  return /*<Navigation />;*/ <Test />;
 };
 
 export default App;
